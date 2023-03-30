@@ -109,6 +109,13 @@ $(document).ready(function() {
     //     }
     // });
 
+    $('input[name=groupway]').each(function() {
+        var select_id = $('input[name=groupway]:checked').attr('id');
+        if (select_id == 'oneway') {
+            $('#boxReturndate').addClass('f');
+        }
+    });
+
 
 
 

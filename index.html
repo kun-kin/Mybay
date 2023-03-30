@@ -187,10 +187,18 @@
                                     </div>
                                     <div class="form-body">
                                         <div class="form-group">
-                                            <input type="radio" name="groupway" id="roundtrip" checked>
-                                            <label for="roundtrip">Khứ hồi</label>
-                                            <input type="radio" name="groupway" id="oneway">
+                                            <!-- <input type="radio" name="groupway" id="roundtrip"> -->
+                                            <label for="roundtrip">Khứ hồi</label> &nbsp;
+                                            <!-- <input type="radio" name="groupway" id="oneway">
+                                            <label for="oneway">Một chiều</label> -->
+                                            <input type="checkbox" name="oneway" id="oneway" onclick="ShowHideDiv(this)">
                                             <label for="oneway">Một chiều</label>
+                                            <script type="text/javascript">
+                                                function ShowHideDiv(oneway) {
+                                                    var oneWaytrip = document.getElementById("boxReturndate");
+                                                    oneWaytrip.style.display = oneway.checked ? "none" : "block";
+                                                }
+                                            </script>
                                             <div class="find-monthpass">
                                                 <input type="checkbox" name="monthpass" id="monthpass">
                                                 <label for="monthpass">Tìm vé tháng</label>
@@ -208,17 +216,25 @@
                                             </label>
                                             <input type="text" placeholder="Gõ Tên Thành phố/Mã sân bay Nội địa hoặc Quốc tế">
                                         </div>
-                                        <div class="form-group form-item boxDate" id="boxStartdate">
-                                            <label for="">
-                                                <span>Khởi hành</span>
-                                            </label>
-                                            <input type="text" value="23/4/2023" class="hasDatepicker">
+                                        <div class="form-group form-item boxDate">
+                                            <div id="boxStartdate">
+                                                <div class="form-group">
+                                                    <label for="">
+                                                        <span>Khởi hành</span>
+                                                    </label>
+                                                    <input type="text" value="23/4/2023" class="hasDatepicker">
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="form-group form-item boxDate" id="boxReturndate">
-                                            <label for="">
-                                                <span>Quay về</span>
-                                            </label>
-                                            <input type="text" value="3/5/2023" class="hasDatepicker">
+                                        <div class="form-group form-item boxDate">
+                                            <div id="boxReturndate">
+                                                <div class="form-group">
+                                                    <label for="">
+                                                        <span>Quay về</span>
+                                                    </label>
+                                                    <input type="text" value="3/5/2023" class="hasDatepicker">
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="boxPerson">
